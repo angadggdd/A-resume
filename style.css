@@ -1,0 +1,27 @@
+#cv-form{
+    /* display: none; */
+    background-image: url("resume\ back.jpg");
+    /* background-image: url("angadbg.jpg"); */
+
+ 
+
+}
+/* .resume{
+    color: rgb(59, 248, 59);
+} */
+
+#cv-template{
+    display: none;
+}
+
+.myimg{
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.background{
+    background-image: url("resume\ back.jpg");
+
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Buildup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class=" resume text-center mt-2">Resume Buildup</h1>
+        <p class=" resume text-center">By -Angad Prajapati </p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal information</h3>
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="contectField">Your contect no</label>
+                    <input type="text" id="contectField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="emailField">Your email id</label>
+                    <input type="text" id="emailField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group" mt-2>
+                    <label for="adressField">Your Adress</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+
+                <div class="form-group mt-2">
+                    <label for="">Select your picture</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+                <p class="text-secondary mt-3">Importent links </p>
+                <div class="form-group">
+                    <label for="facebookField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="linkedinField">Linkedin</label>
+                    <input type="text" id="linkedField" placeholder="Enter here" class="form-control">
+                </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <h3>Professional information</h3>
+                <div class="form-group" mt-2>
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group" mt-2 id="we">
+                    <label for="">Work Experiance</label>
+                    <textarea id="weField" placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+                    <!--new text area-->
+
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group" mt-2 id="aq">
+                    <label for="">Academic Qualification</label>
+                    <textarea id="aqField" placeholder="Enter here" class="form-control eqField"></textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary mt-2">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container text-center mt-3 mb-3">
+                <button onclick="generateCV()" class="btn btn-primary btn-lg">GenerateCV</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- cv temp late -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- first col -->
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34hPo9zGkYxB2NKePgvPeImdm-CDTsHPrt4DFUyU_4A&s"
+                    alt="" class="img-fluid myimg" id="imgTemplate" />
+
+                <div class="container">
+                    <p id="nameT1">Angad Prajapati</p>
+                    <p id="contectT">+8953486788</p>
+                    <p id="emailT">angad@gmail.com</p>
+                    <p id="addressT">mau up india</p>
+
+                    <hr>
+
+                    <p><a id="fbT" href="#1">https://www.Facebook.com/AngadPrajapati</a></p>
+                    <p><a id="instaT" href="#1">https://www.Instagram.com/AngadPrajapati</a></p>
+                    <p><a id="linkedT" href="#1">https://www.Linkedin.com/AngadPrajapati</a></p>
+                </div>
+
+            </div>
+            <div class="col-md-8 py-5">
+
+                <!-- second col -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 800;">Angad Prajapati</h1>
+                <!-- objective card -->
+
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">We have created vertical pods with deep focus; and horizontal pods that
+                            connect diverse technology stacks to collaborate and deliver sustainable outcomes.
+                            We follow Agile methodologies to fail fast and deliver scalable and modular solutions.
+                            We constantly self-assess and realign to work with each customer in the most impactful
+                            manner.
+                        </p>
+                    </div>
+                </div>
+                <!-- work experiance -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- academic qualification -->
+
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                            <li>mohit is a good boy and he was going to shool daily</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">Print cv</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
